@@ -52,16 +52,15 @@ app.post("/api/rfid", async (req, res) => {
     const doc = await rfidRef.get();
 
     const currentDate = new Date().toLocaleDateString("en-US");
-
     const timestamp = admin.firestore.Timestamp.now();
 
     if (doc.exists) {
       const data = doc.data();
-      let history = data.history || [];
+      let history = Array.isArray(data.history) ? [...data.history] : [];
 
-      const todayIndex = history.findIndex((entry) => entry.date === currentDate);
+      const todayIndex = history.findIndex(entry => entry.date === currentDate);
 
-      // If the tag is logged in, then log out
+      // If currently logged in, log out
       if (data.status === "LOGGED IN") {
         if (todayIndex !== -1) {
           history[todayIndex].timeOut = timestamp;
@@ -77,36 +76,54 @@ app.post("/api/rfid", async (req, res) => {
 
         await rfidRef.update({
           status: "LOGGED OUT",
-          history: history
+          history
         });
 
         console.log("✅ Logout recorded for:", rfid);
         return res.json({ success: true, message: "✅ Logout recorded." });
+      } else {
+        // Previously logged out or new session today
+        if (todayIndex !== -1) {
+          history[todayIndex].timeIn = timestamp;
+          history[todayIndex].status = "LOGGED IN";
+        } else {
+          history.push({
+            date: currentDate,
+            status: "LOGGED IN",
+            timeIn: timestamp,
+            timeOut: null
+          });
+        }
+
+        await rfidRef.update({
+          status: "LOGGED IN",
+          history
+        });
+
+        console.log("✅ Login recorded for:", rfid);
+        return res.json({ success: true, message: "✅ Login recorded." });
       }
-    }
+    } else {
+      // First-time tag — new document
+      const newHistory = [{
+        date: currentDate,
+        status: "LOGGED IN",
+        timeIn: timestamp,
+        timeOut: null
+      }];
 
-    // Login if new or previously logged out
-    const newEntry = {
-      date: currentDate,
-      status: "LOGGED IN",
-      timeIn: timestamp,
-      timeOut: null
-    };
-
-    await rfidRef.set(
-      {
+      await rfidRef.set({
         tagID: rfid,
         status: "LOGGED IN",
-        history: admin.firestore.FieldValue.arrayUnion(newEntry)
-      },
-      { merge: true }
-    );
+        history: newHistory
+      });
 
-    console.log("✅ Login recorded for:", rfid);
-    return res.json({ success: true, message: "✅ Login recorded." });
+      console.log("✅ New tag registered and login recorded for:", rfid);
+      return res.json({ success: true, message: "✅ Login recorded (New tag)." });
+    }
 
   } catch (err) {
-    console.error("❌ Firebase Error:", err);
+    console.error("❌ Firebase Error:", err.message, err.stack);
     return res.status(500).json({ success: false, message: "Internal server error." });
   }
 });
