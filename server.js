@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 const serviceAccount = {
   type: "service_account",
   project_id: "rfid-9b396",
-  private_key_id: "21937e3f81ea0a702d687e3349d80c44480b5f7f",
-  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCtQOLLGsmjDiA8\nnjvyLg3QrRSt+F14jjEmEw30lImkOEBFbMgOK4CxaU9zK+6KKqJOma5QR4ppx/Q7\nh1T34CvMbUiZD3LgMx2GHFttMKtO1lpTErgKyq+zaSac8IY0aDU66Fi2Nepn5Zf+\nh9hojJ88qR+3860I+VXiiul1l6VCOYLGdfxC7RIA9xvP9umVgT3LPWGBOL/BeZtf\nj9I+gBpvmuosQ3w17ENTmX1CKT94t6rVbIEcChG8WwWqjifs7/9FB1JIFV+h3tq7\nuvpU8HuqGUTTR0OIDi1S9JCEgAwc2qJCgXOR8yEXCAe9Mpsy32Y5cDubxUH/P0hh\nM2ZM4EqfAgMBAAECggEACZpyd8ZGWE7CJAS0Ae/iPXzlNozGcZZAIdd7NeFojRJp\nIvACrsu5Lcb5QRhgTTGhHtuPOU1IiNCCjdd/MuDZd1K0wXcvwOmpwJ31xg76j+Yl\nyjuxY+JplszvTP0FaLDrXRaKmZ78x+wxXp8dCb6HB7pq0wF4x+nk2X0lr6pLiL4b\n7+3AEXiXtzq+dS2DJJuho2Y8KV9x/1PYXL/94TFfx26w2YqIQiye8CqtowK8155R\nky1dTEy++7ZmLj295TQny5VatBNNmbyRJfpUGx+ntalHse8ewZWRhLuzVYRKJG9y\nPYo9vxXxsyYx2X2PySk7w3jozrgbzGjYpGTVqqOe0QKBgQDh753+hm7JhpBBn+/E\n6P4MoYTYCeeVMPJa/AzCVQKWejLAYoI5OUuVAaV7ot+in0WnmfpeRDnD9IbUm/h9\ntSt8gLbFij/UYBp5oPZY8WBP96YmKtJc2oU3JixR5t7U3KyPnG0fPPDMlHY3brYw\njwZQQefFn7FY0T7W8HkS7XtSuwKBgQDETqrjt3d7LurwLiaZFaYI3+AgQY0olXjx\ns07SYJfNqX/SYw0CYo/Ihu2Ja2TfQW06/MD731PavREWL4Yaw9CPwIWqSS38OFvs\nybcwG+8PjnyDrQDbKjMwvTXMveKjNYtUZlbPnGUrgzAR0gcP0lWdURQdr7dGToOi\nWq7/vIOjbQKBgQDKNCZFbdDnAUxHvzjaFN+RNFjs9GhTSFwOe7d7kJNhUvnq3f7H\n8fQn5jJRJWJaa4ruRcsh5JOCQW0OCIzrDGJf6d4piuI3Us8+/YSb82KMDwqe7AIa\n4eMJiVtu7V2OSfUSDiBHLcYggdoPIEFj0g0HdQRWBOa2o4ZG3S6uduXBEwKBgEg5\naUY+ygbYTDfxwuGvxVaeh6dWdsjntYe3oNhmEXPpWM3fA3pNKPluKxbUHFjHiZia\nRaZllER2K0MuWPif8qvw+Tydj/2r/qYv0OYyYNIoakdH73izHgJgmtqpQikqGgkD\nXg0kTVSk/5qO22pGyJkIq44AiD2lxWiGVLxib0xBAoGAGLnfRf2XeH2lpfkUJ5jV\nth19rZQZlEYoJAJcQ7P1Xc2BY3vrUTcJ5d+aVdTU2pHzmo7k/PNB7bMKbv9KZWOx\nkJ/+p8eKfnINgjDVZRh2r02f+nQmSaOgAIpPaDHlZIGSYP60QssdwYjtJu6BVujK\nq755WE1CgGA2GjPQEtVyQa8=\n-----END PRIVATE KEY-----\n",
+  private_key_id: "e65136acdbffb1bbfc445ba63b38314f783f7c4e",
+  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQD91nBBPMDuRkZx\nZgbduuEnQ2GdMrx5kD3Ga2SgpKFTMyyZzgHsnYc61ld7ZkWYzAEafFbq7/V57to4\niWe9vqLDIw464pjxxjB0z7sP8XBzp0+WaM2tJTfBj0yYHoNjE4YZ4m9lJ0j4D6Ay\nAgkEVvZqDr2s0pCQj+yyfOlil7ucDJ+/JcYhgKElaz0T2gHk3PilpfqQHZHqrG0I\nk2uEOILHO194sulIMd8aApqrpTZXKCIV/wZhVEksBp68WAJejiRM7G1kVnHVA2M1\n9vrPcMknYVag/cfJFHfCaBG3DA+MFW+2QShxZ1XPVxxvc/jcB/QD2XA6/jUJ0p2q\nLuLOeOGtAgMBAAECggEAPMQ+IU/y+9e0+2aqVCBt0CFwV9qShiOCtmJ1N4PR3wIM\nNlG74jIf8nTngnIMTTThOr7za9DAGk2Uzh4OyLy/aCmXOX+Pj6mbZgtow7tP6U/v\nXJmAS2fyfhLZCj2bxHcjDkVH15ZdAI11EyOrlu9elCstOxc5ZnId/uiqUmDyl7tv\n4WiESAGkPlNVrXravJ/liHW4v7hq5qeSDmcA7hTsyG6OKs+Fcfp7ywAR8axDSJbr\nhiMnoLtQjkIFi/MC9MPude5Z4wWWdJY+xPEnmC1uQQ/cE6yI1F49qVxqSOkC3f1Y\nsjeH4CiOitWzzC8ai+x85doXsF3Zf/G1bt2qoP+5IQKBgQD/ZYafiTTZV5EDgCMR\nOQsMoF9ykf+Z7v0DC65+pdV+cVFwrJY8kpbcsWZqVgZyUY+oomZ/rj4PHrge83PN\nMKzQqhOHTP+P6aPm9U/0QcZsRdgoQt8E0ystiJEnl/cu5lTMkC1BGky/zCpd4yJH\ndso6+N08y7jFU5BtxjBy/4ByhQKBgQD+b/g/X0TPGTIXwSphajsh6Q8ZMR8urVa8\nJS4q57j6XChimCFvYZ9JydBOhoDGhVKzS4KAd99t1VRPrqTyl665NnSVdkPQ9onv\n0u/jqW/XqN1PZrWW1y9Wy/Ew4ja05rD6WtPTHK5spFoL+ZSZBGXuZP2k8hfuE0/a\nzbP5NFffCQKBgQDLF131cXNAPf0IDpZUNMtPkBw2jFj4fO5fxKNO/OqH8O61LdkO\nc/dZqgxqFNxtfeRCUlo1wEaDWYdKvYfhrIpQKF79IcK8GywGFh8tejyijuv0IDEe\nshnMzKO5G4QpnGnkfeYutg5AGse5/0ucDp+EQ7ASj2HwMKJSWN7gI8NtzQKBgQDB\nAMyNvcWjVxhxfnyYco2ydmiWknV14dUGWSnBMA9YEmosB/xs0d+TiHvz5QFwFZgb\nG2895jBcz1LqMq86uia2pgEfkxt0Ol99xUNlLZUCQTzHS0D5z/c/3unxS9d1t/yN\nnDJMVNhW3wDTTpoSzIxJnt/srBvM42dSsXEQ20zAiQKBgQC8YHY4perf3X5Rs3af\nkL3hBOhalfy2fC+NhsrZ+wOT+s+5BNL8Y5NeZ8wvgD8qaL5Y7D2Mh4hLPA98Z2OC\nnOgfmIZDtUDerG1oPVB4lnQVVowkCUJz9Q/GU0EEg/O3mu32jB0BGcrZcZJxo1UM\noMoFk/+MMt29466NRIIVSsQS1A==\n-----END PRIVATE KEY-----\n",
   client_email: "firebase-adminsdk-fbsvc@rfid-9b396.iam.gserviceaccount.com",
   client_id: "103240838973168239723",
   auth_uri: "https://accounts.google.com/o/oauth2/auth",
@@ -56,7 +56,7 @@ app.post("/api/rfid", async (req, res) => {
     return res.status(400).json({ success: false, message: "⚠️ RFID is required in the request body." });
   }
 
-  console.log(`📥 Received RFID: ${rfid}`);
+  console.log(📥 Received RFID: ${rfid});
 
   try {
     const rfidRef = db.collection("RFIDTags").doc(rfid);
@@ -106,5 +106,5 @@ app.post("/api/rfid", async (req, res) => {
 // Start Server
 const PORT = 8000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://192.168.1.10:${PORT}`);
+  console.log(🚀 Server running at http://192.168.1.10:${PORT});
 });
