@@ -56,7 +56,7 @@ app.post("/api/rfid", async (req, res) => {
     return res.status(400).json({ success: false, message: "⚠️ RFID is required in the request body." });
   }
 
-  console.log(📥 Received RFID: ${rfid});
+  console.log(`📥 Received RFID: ${rfid}`);  // Corrected the template literal syntax
 
   try {
     const rfidRef = db.collection("RFIDTags").doc(rfid);
@@ -106,5 +106,5 @@ app.post("/api/rfid", async (req, res) => {
 // Start Server
 const PORT = 8000;
 app.listen(PORT, () => {
-  console.log(🚀 Server running at http://192.168.1.10:${PORT});
+  console.log(`🚀 Server running at http://192.168.1.10:${PORT}`);
 });
